@@ -1,0 +1,11 @@
+suitecrm-docker/
+│
+├── app/                  # SuiteCRM source & Dockerfile
+│   └── Dockerfile
+│
+├── cron/                 # Custom cron jobs (optional)
+│   └── suitecrm-cron
+│
+├── .env                  # Configurable credentials and limits
+│
+└── docker-compose.yml    # Main Docker orchestration
