@@ -9,3 +9,10 @@ suitecrm-docker/
 ├── .env                  # Configurable credentials and limits
 │
 └── docker-compose.yml    # Main Docker orchestration
+
+# Download the Latest SuiteCRM version
+https://suitecrm.com/download/
+
+wget https://suitecrm.com/download/165/suite88/565090/suitecrm-8-8-0.zip
+unzip suitecrm-8-8-0.zip -d app/                                              ## Unzip inside app folder
+docker exec -it suitecrm-web chown -R www-data:www-data /var/www/html         ## Set the file permission.
