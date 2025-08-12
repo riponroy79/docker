@@ -39,3 +39,5 @@ If found → shows how many blocks will be deleted (1 host + N services) + Confi
 Confirm Remove → deletes the host block and all service blocks for that host_name, then optional restart.
 
 ![Final_Outcome](https://raw.githubusercontent.com/riponroy79/docker/main/web-nagios-host-add/final_outcome.png)
+
+![Final_Outcome](https://raw.githubusercontent.com/riponroy79/docker/main/web-nagios-host-add-v2/final_outcome.png)
