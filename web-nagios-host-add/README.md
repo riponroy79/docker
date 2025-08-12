@@ -1,6 +1,6 @@
 Files and Folder Layout:
 
-```text
+```
 web-nagios-host-add/
 ├─ docker-compose.yml
 ├─ .env
@@ -9,17 +9,18 @@ web-nagios-host-add/
    └─ app.py
 ```
 Quick setup (copy/paste)
-
+```
 mkdir -p web-nagios-host-add/app
 cd web-nagios-host-add
-
+```
 # create docker-compose.yml and .env here
 # create app/Dockerfile and app/app.py inside app/
 
 # then run:
+```
 docker compose build --no-cache
 docker compose up -d
-
+```
 If you’re using auto-restart of the Nagios container via Docker socket, also mount:
 
 /var/run/docker.sock
