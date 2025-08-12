@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  nagios-host-adder:
+    build: ./app
+    container_name: nagios-host-adder
+    ports:
+      - "8088:8088"
+    environment:
+      AUTH_USER: "${AUTH_USER}"
+      AUTH_PASS: "${AUTH_PASS}"
+      CFG_FILE: "/data/promoteuksites.cfg"
+      # Optional: set your running Nagios container name to auto-restart after write
+      NAGIOS_CONTAINER: "${NAGIOS_CONTAINER:-}"
+      RESTART_NAGIOS: "${RESTART_NAGIOS:-false}"
+    volumes:
+      # CHANGE the left path to your ABSOLUTE path (no ~)
+      - /root/docker-project/nagios-promoteuk-rnd/data/nagiosetc/objects/promoteuksites.cfg:/data/promoteuksites.cfg:rw
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
