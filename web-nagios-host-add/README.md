@@ -1,11 +1,6 @@
 Files and Folder Layout:
 
-web-nagios-host-add/
-├─ docker-compose.yml
-├─ .env
-└─ app/
-   ├─ Dockerfile
-   └─ app.py
+<pre> ```text web-nagios-host-add/ ├─ docker-compose.yml ├─ .env └─ app/ ├─ Dockerfile └─ app.py ``` </pre>
 
 Quick setup (copy/paste)
 
