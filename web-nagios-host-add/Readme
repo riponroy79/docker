@@ -33,6 +33,8 @@ Confirm Add → appends your exact block (only host_name/alias/address changed),
 Remove Host
 Enter domain → “Check”
 If not found → “Host not found.”
+
+https://github.com/riponroy79/docker/blob/main/web-nagios-host-add/final_outcome.png
 If found → shows how many blocks will be deleted (1 host + N services) + Confirm Remove.
 Confirm Remove → deletes the host block and all service blocks for that host_name, then optional restart.
 
