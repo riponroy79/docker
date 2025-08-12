@@ -1,3 +1,28 @@
+Files and Folder Layout:
+
+web-nagios-host-add/
+├─ docker-compose.yml
+├─ .env
+└─ app/
+   ├─ Dockerfile
+   └─ app.py
+
+Quick setup (copy/paste)
+
+mkdir -p web-nagios-host-add/app
+cd web-nagios-host-add
+
+# create docker-compose.yml and .env here
+# create app/Dockerfile and app/app.py inside app/
+
+# then run:
+docker compose build --no-cache
+docker compose up -d
+
+If you’re using auto-restart of the Nagios container via Docker socket, also mount:
+
+/var/run/docker.sock
+
 How it behaves
 Add Host
 Enter domain → “Check”
@@ -10,3 +35,5 @@ Enter domain → “Check”
 If not found → “Host not found.”
 If found → shows how many blocks will be deleted (1 host + N services) + Confirm Remove.
 Confirm Remove → deletes the host block and all service blocks for that host_name, then optional restart.
+
+
