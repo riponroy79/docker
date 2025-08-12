@@ -7,7 +7,7 @@ web-nagios-host-add/
 └─ app/
    ├─ Dockerfile
    └─ app.py
-
+```
 Quick setup (copy/paste)
 
 mkdir -p web-nagios-host-add/app
